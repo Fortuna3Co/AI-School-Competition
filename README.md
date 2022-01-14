@@ -82,7 +82,7 @@ for i in range(test.shape[0]):
 ```
 5. 다양한 파생 변수들을 생성했으며 반영에는 rmse 점수와 부동산 관련 책 및 논문을 참고했다. (노트북 코드 참고)
  
-#### AI 경진대회 발표자료
+## AI 경진대회 발표자료
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445434-d90dfd28-4a56-479f-bdc7-54c67a853b03.JPG"/>
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445439-55e81bae-f9dc-4826-a09f-13967f650986.JPG"/>
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445440-284168de-9076-44e7-85bb-a7b54af0d132.JPG"/>
