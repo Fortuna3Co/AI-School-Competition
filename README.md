@@ -43,9 +43,7 @@
 
 
 #### AI 경진대회 발표자료
-<img width="80%" src="https://user-images.githubusercontent.com/78258412/149445432-39db7a07-a6a2-4fd0-89c9-9cc28558d933.JPG"/>
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445434-d90dfd28-4a56-479f-bdc7-54c67a853b03.JPG"/>
-
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445439-55e81bae-f9dc-4826-a09f-13967f650986.JPG"/>
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445440-284168de-9076-44e7-85bb-a7b54af0d132.JPG"/>
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445442-4b477c65-c48a-4808-88f6-9583b08850ee.JPG"/>
