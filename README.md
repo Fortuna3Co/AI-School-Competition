@@ -42,6 +42,46 @@
 ![슬라이드13](https://user-images.githubusercontent.com/78258412/149445459-7f9fe209-fa6d-4c5b-b5be-ce44bea50b09.JPG)
 
 
+### 결과
+
+1.  Minimum_sales_price는 예측하고자 하는 값인 Hammer_price와 매우 큰 상관관계를 가지고 있었기 때문에 직접 반영하는 것 대신 아래와 같은 형태로 바꾸었다.
+``` python
+train['Temporary_price'] = train['Hammer_price'] / train['Minimum_sales_price']
+```
+2.  scatter_print 함수를 여러 변수에 적용 시킨 결과 한 개의 이상치(극단값, Outlier)이 존재함을 알 수 있었다.
+![슬라이드4](https://user-images.githubusercontent.com/78258412/149445440-284168de-9076-44e7-85bb-a7b54af0d132.JPG)
+``` python
+def scatter_print(features):
+  var = features
+  var_data = pd.concat([train['Hammer_price'], train[var]], axis=1)
+  var_data.plot.scatter(x=var, y='Hammer_price', ylim=(0, 151.51))
+  plt.show() 
+  
+train = train[train.Hammer_price != max(train['Hammer_price'])] # 이상치 제거
+```
+3. 결측치를 제거하는 것과 제거하지 않고 평균값 등으로 처리한 후 학습 결과 비교시 제거하는 것의 오차율이 더 적었음을 알 수 있었다.
+4.  거주층이 아파트 가격에 미치는 영향에 관한 연구 : 공간, 시간 모형 분석 논문을 참고해 중간 층수의 가격이 높지만 아파트 전체 층수에 따라 조금씩 바뀌는 것을 생각해 적용했다. 중간 층수 1을 기준으로 한 층씩 떨어질 때 마다 값이 감소하도록 Loyal_floor 변수를 생성했다.
+```
+#### 2020-11-27 중간층수 가격 높음
+## http://www.kahps.org/data/_research/201905/15593089066584.pdf 참고 논문
+## 13층 이상일 경우 7-9 층이 가격이 높은 것으로 나옴 => 8층
+## 7층 - 12층 4-6층 => 5층
+## 6층 이하 Top - 1
+train['Loyal_floor'] = 0.0
+for i in range(train.shape[0]):
+  if abs((train['Total_floor'][i] / 2) - train['Current_floor'][i]) == 0:
+    train['Loyal_floor'][i] = 1
+  else: train['Loyal_floor'][i] = ((train['Total_floor'][i] / 2) - abs((train['Total_floor'][i] / 2) - train['Current_floor'][i])) / (train['Total_floor'][i] / 2) 
+
+test['Loyal_floor'] = 0.0
+for i in range(test.shape[0]):
+  if abs((test['Total_floor'][i] / 2) - test['Current_floor'][i]) == 0:
+    test['Loyal_floor'][i] = 1
+  else: test['Loyal_floor'][i] = ((test['Total_floor'][i] / 2) - abs((test['Total_floor'][i] / 2) - test['Current_floor'][i])) / (test['Total_floor'][i] / 2) 
+
+```
+5. 다양한 파생 변수들을 생성했으며 반영에는 rmse 점수와 부동산 관련 책 및 논문을 참고했다. (노트북 코드 참고)
+ 
 #### AI 경진대회 발표자료
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445434-d90dfd28-4a56-479f-bdc7-54c67a853b03.JPG"/>
 <img width="80%" src="https://user-images.githubusercontent.com/78258412/149445439-55e81bae-f9dc-4826-a09f-13967f650986.JPG"/>
