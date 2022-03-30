@@ -45,13 +45,18 @@
 2. [Kaggle 노트북 분석](https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python)
 ![슬라이드11](https://user-images.githubusercontent.com/78258412/149445454-f089c22e-5571-4e68-912b-8af058ccc1cf.JPG)
 
-3. 참고 논문
+3. 데이터 분석
+<img width="90%" src="https://user-images.githubusercontent.com/78258412/149445440-284168de-9076-44e7-85bb-a7b54af0d132.JPG"/>
+
+4. 참고 논문 
     3-1. 머신러닝 기반의 부동산경매 낙찰가 예측 모델에 관한 연구
 ![슬라이드12](https://user-images.githubusercontent.com/78258412/149445457-44350b33-bfc1-4a2e-812c-f9fb84a6dcc5.JPG)
     3-2 거주층이 아파트 가격에 미치는 영향에 관한 연구 : 공간, 시간 모형 분석
 ![슬라이드13](https://user-images.githubusercontent.com/78258412/149445459-7f9fe209-fa6d-4c5b-b5be-ce44bea50b09.JPG)
 
-
+5. 학습 모델 선정
+<img width="90%" src="https://user-images.githubusercontent.com/78258412/149445444-2ad026ed-edbc-4938-b7e3-d44b8a110e5f.JPG"/>
+<img width="90%" src="https://user-images.githubusercontent.com/78258412/149445446-1d61a548-91c8-4111-a6dd-4b93b8f29e05.JPG"/>
 
 
 ### 결과
@@ -168,14 +173,19 @@ for i in range(test.shape[0]):
 2. [Kaggle Notebook analysis](https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python)
 ![슬라이드11](https://user-images.githubusercontent.com/78258412/149445454-f089c22e-5571-4e68-912b-8af058ccc1cf.JPG)
 
-3. Reference paper
+3. Data analysis
+<img width="90%" src="https://user-images.githubusercontent.com/78258412/149445440-284168de-9076-44e7-85bb-a7b54af0d132.JPG"/>
+
+
+4. Reference paper
     3-1. 머신러닝 기반의 부동산경매 낙찰가 예측 모델에 관한 연구 (A research on contract price prediction model for real estate auction based on Machine Learning Technology)
 ![슬라이드12](https://user-images.githubusercontent.com/78258412/149445457-44350b33-bfc1-4a2e-812c-f9fb84a6dcc5.JPG)
     3-2 거주층이 아파트 가격에 미치는 영향에 관한 연구 : 공간, 시간 모형 분석 (A Study on the Impact on Living Floor on the Price of an Apartment using a Spatio-temporal Model)
 ![슬라이드13](https://user-images.githubusercontent.com/78258412/149445459-7f9fe209-fa6d-4c5b-b5be-ce44bea50b09.JPG)
 
-
-
+5. Learning model selection
+<img width="90%" src="https://user-images.githubusercontent.com/78258412/149445444-2ad026ed-edbc-4938-b7e3-d44b8a110e5f.JPG"/>
+<img width="90%" src="https://user-images.githubusercontent.com/78258412/149445446-1d61a548-91c8-4111-a6dd-4b93b8f29e05.JPG"/>
 
 ### Result
 
